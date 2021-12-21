@@ -8,9 +8,9 @@ jobs:
   basic_ci:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v2
-      -uses: actions/setup-node@v2
-       with:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
           node-version: 14
-      -rum: npm ci
-      -run: npm test
+      - rum: npm ci
+      - run: npm test
