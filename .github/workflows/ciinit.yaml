@@ -2,7 +2,7 @@ name: Basic Integration continues
 
 on:
   pull_request:
-    branches:[back]
+    branches: [back]
 
 jobs: 
   basic_ci:
