@@ -3,7 +3,6 @@ name: Basic Integration continues
 on:
   pull_request:
     branches: [back]
-
 jobs: 
   basic_ci:
     runs-on: ubuntu-latest
