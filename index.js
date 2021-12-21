@@ -12,8 +12,8 @@ const { ApolloServer } = require('apollo-server-express')
 
 const key = 'CLAVEDIFICIL';
 
+const api = express();
 const iniciarServidor = async () => {
-    const api = express();
     const apollo = new ApolloServer(
         {
             typeDefs,
@@ -47,10 +47,16 @@ const iniciarServidor = async () => {
     api.get('/api/dashboard/estudiante', [validarToken, estudiante], (request, response) => {
         response.json("Soy el dashboard")
     })
+
+    api.get("/healt-check", (req,resp)=>{
+        resp.json("ok")
+    })
+
     api.listen('9092', () => console.log('Inicio server'))
 }
 iniciarServidor()
 
+module.exports = api
 
 // require('./infraestructura/conectionDB')
 
